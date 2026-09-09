@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interior Decor E-Shop</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3f0e8;
+            text-align: center;
+            padding: 20px;
+            color: #355c3a;
+        }
+
+        .app {
+            background: white;
+            max-width: 250px;
+            margin: auto;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .card {
+            background: white;
+            margin: 10px 0;
+            padding: 14px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px #ccc;
+        }
+
+        .title {
+            background: #fff0dc;
+            padding: 5px;
+            color: #c65d1e;
+            font-weight: bold;
+        }
+
+        button {
+            background: #398344;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #28652f;
+        }
+
+        .product {
+            font-size: 35px;
+            background: #e8f1e5;
+            padding: 12px;
+            margin: 8px auto;
+            width: 110px;
+            border-radius: 5px;
+        }
+
+        .room {
+            background: #ead8c5;
+            height: 70px;
+            margin: 10px auto;
+            width: 145px;
+            border-radius: 4px;
+            padding-top: 15px;
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 9px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🏠 Interior Decor E-Shop</h2>
+
+    <div class="app">
+
+        <!-- Featured Product -->
+        <div class="card">
+            <div class="title">Modern Home Decor</div>
+            <p>Beautiful furniture and decor for your dream home.</p>
+            <button onclick="showProduct()">View Collection</button>
+        </div>
+
+        <!-- Product Fact -->
+        <div class="card">
+            <p id="fact">Natural wooden furniture adds warmth to your home.</p>
+
+            <button onclick="hideFact()">Hide Fact</button>
+            <button onclick="showFact()">Show Fact</button>
+        </div>
+
+        <!-- Room Styling -->
+        <div class="card">
+            <h3 style="font-size:13px;">Room Styling</h3>
+
+            <div class="room" id="room">
+                🛋️ 🪴
+            </div>
+
+            <button onclick="styleRoom()">Style Room</button>
+        </div>
+
+        <!-- Categories -->
+        <div class="card">
+            <h3 style="font-size:13px;">Decor Categories</h3>
+
+            <div class="product" id="product">
+                🪑
+            </div>
+
+            <p id="category">Furniture Collection</p>
+
+            <button onclick="changeCategory()">Explore Decor</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function showProduct() {
+            alert("Welcome to our Interior Decor Collection!");
+        }
+
+        function hideFact() {
+            document.getElementById("fact").style.display = "none";
+        }
+
+        function showFact() {
+            document.getElementById("fact").style.display = "block";
+        }
+
+        function styleRoom() {
+            document.getElementById("room").innerHTML = "🛋️ 🪴 🖼️ 💡";
+        }
+
+        function changeCategory() {
+            document.getElementById("product").innerHTML = "🛏️";
+            document.getElementById("category").innerHTML =
+                "Bedroom & Living Room Decor";
+        }
+
+    </script>
+
+</body>
+</html>
